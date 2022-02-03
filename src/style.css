@@ -1,0 +1,67 @@
+/* THE BELOW IS A COMMENT
+
+if an html element has anything after the name its called a property or attribute. for example:
+
+---EX: start
+
+<div class="this_is_an_attribute" id="so_is_this" name="also_an_attribute_or_property"></div>
+
+---EX: end
+above example has three attributes or properties, class, id and name. 
+
+We can access the class in css by saying .class_name: or id by saying #name_of_id.
+NOTE: id's are strings, string are anything in between "" or ''
+
+when a html element like <div></div> has a "class" like <div class="my__app"></div> 
+we access the style of that class with a ".", or dot operator 
+so in css we'd access the div element with the class whose name is "my__app like this: 
+
+--- start of example
+.my__app {
+
+}
+--- end of example
+for html with the "id" like <div id="my_id_1"></div>
+
+--- start
+ #my_id_1 {
+ 
+
+}
+--- end
+
+when ever you see "{}" it is called an assertion which means you'll be using a language specific syntax like css or javaScript.
+in JS if there is and "=" assignment operator it is considered an object.
+
+to change styles of a specific element access either the "id" or "class" of the element and change css properties like so.
+
+---  start
+.my_class_name {
+  background-color: #hex or, rgb(0, 0, 0) or rgba(0, 0, 0, 0) ; <== could each zero can be 0-255, except the last one is 0 - 1 so like .5 .3 etc...
+  height: 20px or 20rem or 20em or auto; etc...
+}
+
+always put a dash instead of whitespace so for border radius it would be "border-radius"
+after the property name goes a colon then a semicolon like "border-radius: ; and between the colon and semi colon goes 
+your adjustment so for border-radius you'd put the what the radius should be in pixels. like this
+
+#my_id_1 {
+  border-radius: 10px;
+}
+
+.my_class_name {
+  border-radius: 10px;
+}
+
+---  end
+
+*/
+
+body{
+  /* once css is working you can remove this if you want. */
+  background-color: black;
+}
+
+.clock__app {
+  /* css goes here for the main tag with class="clock__app" */
+}
