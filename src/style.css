@@ -57,11 +57,47 @@ your adjustment so for border-radius you'd put the what the radius should be in 
 
 */
 
-body{
-  /* once css is working you can remove this if you want. */
-  background-color: black;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.glow {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+}
+div {
+    color: rgb(41, 228, 57);
+    font-size: 20px
+}
+.clock_content {
+    font-size: 25px
+}
+#clock {
+    color: white
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
 }
 
-.clock__app {
-  /* css goes here for the main tag with class="clock__app" */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

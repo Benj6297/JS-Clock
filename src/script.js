@@ -1,50 +1,33 @@
-alert('JavaScript is working');
-console.log('javascript is working');
+function displayTime () {
+// explain please 
+  const timeNow = new Date()
+  
 
-// below is and example of creating and event listener and a function
+  let hourOfDay = timeNow.getHours();
+  let minutes = timeNow.getMinutes();
+  let seconds = timeNow.getSeconds();
+  let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let today = weekDay[timeNow.getDay()];
+  // explain please  weekDay[3] 
+  let months = timeNow.toLocaleString("default", {month: "long"});
+  console.log(months)
+  let year = timeNow.getFullYear();
+  let period = "AM";
 
-// function
-
-function awesome(someValueIsTrue) {
-  //blue prints or assertion
-
-  //if check
-  if (someValueIsTrue) {
-    return 'this value is true';
-  } else {
-    return 'this value is false';
+  if (hourOfDay < 12) {
+    hourOfDay -= 12;
+    period = "AM";
   }
+
+  if (hourOfDay => 12) {
+    hourOfDay = 12; 
+    period = "PM"
+  }
+hourOfDay = hourOfDay < 10 ? "0" + hourOfDay : hourOfDay;
+minutes = minutes < 10 ? "0" + minutes : minutes;
+seconds = seconds < 10 ? "0" + seconds : seconds;
+let currentTime = hourOfDay + ":" + minutes + ":" + seconds + ":" + period
+// explain please
+document.getElementById('Clock').innerHTML =  currentTime + " " + today +" " + months + " " + year;
 }
-awesome(true); // will return "this value is true"
-
-// the keywork "function" initializes the function. Then in the {} you define what should happen. the values inside the ()
-// are to pass values to the function to use.
-
-//another example
-
-function useArgument(
-  thisIsAnArgument,
-  soIsThis,
-  needToBe,
-  separatedBy,
-  commas,
-) {
-  console.log(thisIsAnArgument);
-  console.log(soIsThis);
-  console.log(needToBe);
-  console.log(separatedBy);
-  console.log(commas);
-  console.log('you can have as many as you want');
-}
-
-useArgument(
-  'also',
-  "it doesn't",
-  'matter',
-  'what the argument is just that you as the developer are expecting it.',
-  10,
-);
-// Once app is working go to browser right click select "inspect" then in dev console click console tag.
-// the above can be deleted.
-
-// Under here put the functionality for building a clock.
+displayTime();
